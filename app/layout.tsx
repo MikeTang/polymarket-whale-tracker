@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Your Work Buddies app",
-  description: "Built with the Work Buddies team.",
+  title: "Whale Tracker — Polymarket → Kalshi",
+  description: "Spot large bets on Polymarket and copy-trade them on Kalshi.",
 };
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-neutral-50 text-neutral-900 antialiased">
+      <body className="min-h-screen bg-gray-950 text-gray-100 antialiased">
         {children}
       </body>
     </html>

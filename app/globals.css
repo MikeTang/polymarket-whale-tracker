@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.whale-glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+.checked-row {
+  opacity: 0.55;
+}
+
+.checked-row td {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.checked-row .badge {
+  opacity: 0.5;
+}
+
+.pulse-dot {
+  animation: pulse-anim 2s infinite;
+}
+
+@keyframes pulse-anim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
