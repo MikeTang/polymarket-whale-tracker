@@ -6,28 +6,49 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Indigo glow on the input cards */
 .whale-glow {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.12), 0 1px 3px rgba(0,0,0,0.4);
 }
 
+/* Subtle inner shadow on the trades table card */
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04) inset;
+}
+
+/* Checked row — strikethrough + muted, but still visible */
 .checked-row {
-  opacity: 0.55;
+  opacity: 0.48;
+  background: rgba(17, 24, 39, 0.4);
 }
 
 .checked-row td {
   text-decoration: line-through;
+  text-decoration-color: rgba(107, 114, 128, 0.6);
   color: #6b7280;
 }
 
 .checked-row .badge {
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
+/* Live pulse animation */
 .pulse-dot {
   animation: pulse-anim 2s infinite;
 }
 
 @keyframes pulse-anim {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  50% { opacity: 0.35; }
+}
+
+/* Subtle row hover glow */
+tr.trade-row:hover td {
+  background: rgba(99, 102, 241, 0.04);
+}
+
+/* Size value highlight — make big numbers pop */
+.size-value {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
 }
